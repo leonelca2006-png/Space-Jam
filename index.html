@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sistema Estelar – PC POM-2</title>
+
+<style>
+    body {
+        margin:0;
+        padding:0;
+        font-family: "Consolas", "Courier New", monospace;
+        background: black;
+        color: #7fcfff;
+        overflow:hidden;
+    }
+
+    /*--- Fondo "espacial" + CRT ---*/
+    #background {
+        position:fixed;
+        inset:0;
+        background: radial-gradient(circle at center, #341539 0%, #000 70%);
+        overflow:hidden;
+    }
+
+    /* Efecto de estrellas */
+    .star {
+        position:absolute;
+        width:2px;
+        height:2px;
+        background:#7fcfff;
+        opacity:0.7;
+        animation: drift 7s linear infinite;
+    }
+
+    @keyframes drift {
+        from { transform: translateY(-20px); opacity:0.8; }
+        to   { transform: translateY(120vh); opacity:0; }
+    }
+
+    /*--- Pantalla PC Pom 2 ---*/
+    #screen {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        width:90%;
+        max-width:600px;
+        background:radial-gradient(circle at center, #341539 0%, #311432 70%);
+        border-radius:18px;
+        border:3px solid #ffffff;
+        padding:30px;
+        box-shadow:0 0 25px #400040;
+        animation: powerOn 1.2s ease-out;
+    }
+
+    @keyframes powerOn {
+        0% { opacity:0; filter:blur(12px); }
+        60% { opacity:1; filter:blur(2px); }
+        100% { opacity:1; filter:blur(0); }
+    }
+
+    /* Glitch */
+    .glitch {
+        animation: glitch 2.4s infinite;
+    }
+
+    @keyframes glitch {
+        0% { text-shadow: 0 0 6px #4fbaff; }
+        20% { text-shadow: 2px 0 #4fbaffaa, -2px -1px #7fcfff88; }
+        40% { text-shadow: 0 0 8px #4fbaff; }
+        60% { text-shadow: -3px 0 #7fcfffaa, 2px 2px #4fbaff88; }
+        80% { text-shadow: 0 0 6px #4fbaff; }
+        100% { text-shadow: 0 0 8px #7fcfff; }
+    }
+
+    /*--- Botón estilo PC Pom 2 ---*/
+    .btn-enter {
+        display:block;
+        margin:25px auto 0;
+        padding:12px 25px;
+        border-radius:14px;
+        background: #003d66;
+        color:#7fcfff;
+        border:2px solid #4fbaff;
+        text-align:center;
+        font-size:18px;
+        letter-spacing:1px;
+        cursor:pointer;
+        transition:0.25s;
+        box-shadow:0 0 12px #4fbaff44;
+    }
+
+    .btn-enter:hover {
+        background:#00588c;
+        box-shadow:0 0 18px #4fbaffaa;
+        transform:scale(1.05);
+    }
+
+    .line {
+        margin-top:12px;
+        width:100%;
+        height:2px;
+        background:#4fbaff44;
+    }
+
+    /* CRT */
+    #scanlines {
+        pointer-events:none;
+        position:fixed;
+        inset:0;
+        background: repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.05) 0px,
+            rgba(255,255,255,0.03) 2px,
+            rgba(0,0,0,0) 4px
+        );
+        mix-blend-mode:overlay;
+        z-index:10;
+        opacity:0.6;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="background"><img style="background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; width: 100%; height: 100%;" src="estrellaslol/images/starbackground.png"></div></div>
+
+<div id="screen">
+    <h2 class="glitch">S.E.S. // PC POM-2 SYSTEM</h2>
+    <div class="line"></div>
+
+    <p>> Inicializando Sistema Estelar...</p>
+    <p>> Cargando módulos cósmicos...</p>
+    <p>> Señal óptica estabilizada.</p>
+    <p>> Sistema listo.</p>
+
+    <button class="btn-enter" onclick="entrar()">ENTRAR AL SISTEMA</button>
+</div>
+
+<div id="scanlines"></div>
+
+<script>
+    // Generar estrellas dinámicas
+    const bg = document.getElementById("background");
+
+    function createStar() {
+        const s = document.createElement("div");
+        s.classList.add("star");
+        s.style.left = Math.random()*100 + "vw";
+        s.style.top = "-10px";
+        s.style.animationDuration = (4 + Math.random()*6) + "s";
+        bg.appendChild(s);
+
+        setTimeout(() => s.remove(), 9000);
+    }
+
+    setInterval(createStar, 120);
+
+    // Acción del botón
+    function entrar() {
+        window.location.href = "menu.html";
+    }
+</script>
+
+</body>
+</html>
