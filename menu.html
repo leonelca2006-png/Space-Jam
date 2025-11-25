@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Estelar – Menú Principal</title>
+
+<style>
+    body {
+        margin:0;
+        background:black;
+        font-family:"Consolas","Courier New",monospace;
+        color:#7fcfff;
+        overflow:hidden;
+    }
+
+    /* Fondo espacial */
+    #bg {
+        position:fixed;
+        inset:0;
+        background: radial-gradient(circle at center,#001a33 0%,#000000 70%);
+        z-index:-1;
+    }
+
+    .star {
+        position:absolute;
+        width:2px;
+        height:2px;
+        background:#7fcfff;
+        opacity:0.7;
+        animation: fall 7s linear infinite;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(-20px); opacity:0.8; }
+        100% { transform: translateY(120vh); opacity:0; }
+    }
+
+    /* Contenedor principal */
+    #window {
+        width:90%;
+        max-width:700px;
+        margin:60px auto;
+        padding:25px;
+        background:#001726;
+        border-radius:20px;
+        border:3px solid #4fbaff;
+        box-shadow:0 0 25px #4fbaff88;
+        animation: popup .8s ease-out;
+    }
+
+    @keyframes popup {
+        0% { opacity:0; transform:scale(0.8); filter:blur(6px); }
+        100% { opacity:1; transform:scale(1); filter:blur(0); }
+    }
+
+    /* Título estilo PC Pom 2 */
+    h1 {
+        text-align:center;
+        font-size:26px;
+        margin-bottom:20px;
+        color:#7fcfff;
+        text-shadow:0 0 8px #4fbaff;
+    }
+
+    .line {
+        width:100%;
+        height:2px;
+        background:#4fbaff55;
+        margin:15px 0 20px 0;
+    }
+
+    /* Botones */
+    .menu-btn {
+        display:block;
+        width:100%;
+        padding:14px;
+        margin:12px 0;
+        background:#003d66;
+        color:#7fcfff;
+        border:2px solid #4fbaff;
+        border-radius:12px;
+        font-size:18px;
+        cursor:pointer;
+        text-align:center;
+        letter-spacing:1px;
+        transition:.22s;
+        box-shadow:0 0 12px #4fbaff44;
+    }
+
+    .menu-btn:hover {
+        background:#00588c;
+        transform:scale(1.04);
+        box-shadow:0 0 18px #4fbaffaa;
+    }
+
+    /* Información inferior */
+    #footer {
+        margin-top:25px;
+        text-align:center;
+        color:#4fbaffaa;
+        font-size:14px;
+    }
+
+    /* CRT scanlines */
+    #scan {
+        pointer-events:none;
+        position:fixed;
+        inset:0;
+        background:repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.05) 0px,
+            rgba(255,255,255,0.02) 2px,
+            rgba(0,0,0,0) 4px
+        );
+        opacity:.5;
+        mix-blend-mode:overlay;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="bg"></div>
+
+<div id="window">
+    <h1>SISTEMA ESTELAR – MENÚ</h1>
+    <div class="line"></div>
+
+    <button class="menu-btn" onclick="go('constelaciones_zodiaco/principal.html')">
+        CONSTELACIONES
+    </button>
+
+    <button class="menu-btn" onclick="go('agujeros_negros/principal2.html')">
+        AGUJEROS NEGROS
+    </button>
+
+    <button class="menu-btn" onclick="go('estrellaslol/principal3v2.html')">
+        ESTRELLAS
+    </button>
+
+    <!-- para futuro -->
+    <button class="menu-btn" disabled style="opacity:0.4; cursor:default;">
+        CATEGORÍA 4 (bloqueada)
+    </button>
+
+    <button class="menu-btn" disabled style="opacity:0.4; cursor:default;">
+        CATEGORÍA 5 (bloqueada)
+    </button>
+
+    <div id="footer">
+        PC POM-2 // Sistema Estelar Experimental
+    </div>
+</div>
+
+<div id="scan"></div>
+
+<script>
+    // Estrellas dinámicas
+    const bg = document.getElementById("bg");
+
+    function star() {
+        const s = document.createElement("div");
+        s.className = "star";
+        s.style.left = Math.random()*100 + "vw";
+        s.style.top = "-10px";
+        s.style.animationDuration = (4 + Math.random()*7) + "s";
+        bg.appendChild(s);
+        setTimeout(() => s.remove(), 9000);
+    }
+
+    setInterval(star, 120);
+
+    // Función de navegación
+    function go(pag) {
+        window.location.href = pag;
+    }
+</script>
+
+</body>
+</html>
