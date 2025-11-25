@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evolución de las Estrellas</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #0a0018, #1d0036);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      font-size: 35px;
+      font-weight: bold;
+      color: #f0d2ff;
+      text-shadow: 0 0 12px #e4b7ff;
+    }
+
+    .cuadro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px auto;
+      width: 85%;
+      gap: 20px;
+    }
+
+    .texto {
+      width: 60%;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .imagen {
+      width: 35%;
+      text-align: center;
+    }
+
+    .imagen img {
+      width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .imagen img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 45px rgba(240, 210, 255, 0.8);
+    }
+
+    /* MENU LATERAL */
+    #menu-btn {
+      position: fixed;
+      left: 20px;
+      top: 20px;
+      background: #c38bff;
+      padding: 12px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 0 12px #c38bff;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    #menu-btn:hover {
+      transform: scale(1.15);
+    }
+
+    #side-menu {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 260px;
+      height: 100%;
+      background: rgba(28, 0, 46, 0.95);
+      padding-top: 70px;
+      transition: 0.35s;
+      box-shadow: 5px 0 20px rgba(0,0,0,0.4);
+    }
+
+    #side-menu a {
+      display: block;
+      padding: 18px 25px;
+      color: #e8caff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    #side-menu a:hover {
+      background: rgba(255,255,255,0.08);
+      padding-left: 35px;
+    }
+
+    @media (max-width: 850px) {
+      .cuadro {
+        flex-direction: column;
+        text-align: center;
+      }
+      .texto { width: 100%; }
+      .imagen img { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- BOTÓN MENU -->
+<div id="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- MENÚ LATERAL -->
+<nav id="side-menu">
+  <a href="../agujeros_negros/principal2.html">Agujeros Negros</a>
+  <a href="../constelaciones_zodiaco/principal.html">Constelaciones del Zodíaco</a>
+  <a href="principal3v2.html">Estrellas (Inicio)</a>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("side-menu");
+    menu.style.left = (menu.style.left === "0px") ? "-260px" : "0px";
+  }
+</script>
+
+<header>Evolución de las Estrellas</header>
+
+<!-- 1. PROTOESTRELLA -->
+
+<div class="cuadro" id="protoestrella">
+  <div class="texto">
+    <h2>1. Fase Protoestelar</h2>
+    <p>
+      Todo comienza dentro de una enorme nube molecular compuesta de gas y polvo. 
+      Bajo la acción de la gravedad, el material colapsa lentamente hasta formar un núcleo muy caliente: 
+      la <b>protoestrella</b>.  
+      Aquí todavía no ocurre fusión nuclear; solo es un objeto creciente que aumenta su temperatura y densidad.  
+      Es el equivalente al “embarazo” de una estrella.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/protoestelar.jpg" alt="Protoestrella">
+  </div>
+</div>
+
+<!-- 2. SECUENCIA PRINCIPAL -->
+
+<div class="cuadro" id="secuencia">
+  <div class="texto">
+    <h2>2. Secuencia Principal</h2>
+    <p>
+      Cuando la presión y la temperatura del núcleo alcanzan niveles extremos, comienza la fusión nuclear: 
+      el hidrógeno se convierte en helio.  
+      La estrella entra en su fase más estable y larga, conocida como <b>Secuencia Principal</b>.
+      El Sol, por ejemplo, se encuentra en esta etapa.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/secuenciaprincipal.jpg" alt="Secuencia Principal">
+  </div>
+</div>
+
+<!-- 3. SISTEMA BINARIO -->
+
+<div class="cuadro" id="binario">
+  <div class="texto">
+    <h2>3. Sistemas Binarios</h2>
+    <p>
+      Un gran número de estrellas no viven solas: forman sistemas dobles o múltiples.  
+      En un <b>sistema binario</b>, dos estrellas orbitan alrededor de un centro de masa común.
+      Estos sistemas pueden intercambiar masa y alterar la evolución normal de una estrella,
+      dando lugar a fenómenos extremos como novas, estrellas vampiro o fusiones estelares.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/sistemabinario.webp" alt="Sistema binario">
+  </div>
+</div>
+
+<!-- 4. SUPERGIGANTE ROJA -->
+
+<div class="cuadro" id="supergigante">
+  <div class="texto">
+    <h2>4. Gigante Roja / Supergigante Roja</h2>
+    <p>
+      Una estrella como el Sol, al agotar su hidrógeno, se hincha y se convierte en una <b>gigante roja</b>.  
+      Las estrellas más masivas se transforman en <b>supergigantes rojas</b>, 
+      uno de los tipos de estrellas más grandes del universo.  
+      Su superficie es fría, pero su interior arde en procesos de fusión más avanzados.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/supergigante.jpg" alt="Supergigante Roja">
+  </div>
+</div>
+
+<!-- 5. SUPER NOVA -->
+
+<div class="cuadro" id="supernova">
+  <div class="texto">
+    <h2>5. Supernova</h2>
+    <p>
+      Cuando una estrella masiva llega al límite de su vida, su núcleo colapsa y estalla en una <b>supernova</b>.  
+      Es una de las explosiones más violentas del cosmos.  
+      En unos segundos, libera más energía que el Sol en toda su existencia.  
+      De esta explosión nacen muchos de los elementos químicos que hoy existen en la Tierra.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/supernova.jpg" alt="Supernova">
+  </div>
+</div>
+
+<!-- 6. ENANA BLANCA -->
+
+<div class="cuadro" id="enana">
+  <div class="texto">
+    <h2>6. Enana Blanca</h2>
+    <p>
+      Si la estrella no era lo suficientemente grande como para estallar, termina convirtiéndose en una 
+      <b>enana blanca</b>.  
+      Es un núcleo ultra denso, del tamaño de la Tierra pero con la masa del Sol.  
+      Brilla por el calor que conserva, pero ya no puede generar energía mediante fusión.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/enanablanca.jpg" alt="Enana Blanca">
+  </div>
+</div>
+
+<!-- 7. ESTRELLA DE NEUTRONES -->
+
+<div class="cuadro" id="neutrones">
+  <div class="texto">
+    <h2>7. Estrella de Neutrones</h2>
+    <p>
+      Tras una supernova, si la masa restante no es enorme, el núcleo colapsa hasta formar una 
+      <b>estrella de neutrones</b>.  
+      Es tan densa que una cucharadita de su materia pesa millones de toneladas.  
+      Estas estrellas suelen rotar a gran velocidad y emitir pulsos de radiación llamados 
+      <b>púlsares</b>.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/neutron.jpg" alt="Estrella de Neutrones">
+  </div>
+</div>
+
+<!-- 8. AGUJERO NEGRO (opcional pero lógico en la evolución) -->
+
+<div class="cuadro" id="agujero">
+  <div class="texto">
+    <h2>8. Agujero Negro</h2>
+    <p>
+      Si la estrella original era extremadamente masiva, la gravedad final es tan intensa que ni la 
+      luz puede escapar.  
+      Así nace un <b>agujero negro</b>, el objeto más extremo conocido.  
+      Aunque aquí solo lo mencionamos, su módulo completo está en la página correspondiente del proyecto.
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img src="images/blackhole.webp" alt="Agujero Negro">
+  </div>
+</div>
+
+<br><br>
+
+</body>
+</html>

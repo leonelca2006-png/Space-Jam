@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Estrellas — Universo</title>
+  <meta name="description" content="Página módulo sobre las estrellas: tipos, ciclo de vida, clasificación espectral y sistemas binarios.">
+  <style>
+    /* ===== Variables y reset ligero ===== */
+    :root{
+      --bg:#0b1220;
+      --card:#0f1724;
+      --accent:#7c5cff;
+      --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#05060a 0%, var(--bg) 60%);color:#e6eef8}
+    img{max-width:100%;display:block}
+    a{color:var(--accent);text-decoration:none}
+
+    /* ===== Contenedor principal ===== */
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center;margin-bottom:18px}
+    .logo{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,#2b2e54 0%, #6a54c9 100%);display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .logo span{font-size:28px}
+    header h1{font-size:20px;margin:0}
+    header p{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+    /* ===== Grid principal ===== */
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr}}
+
+    /* ===== Tarjeta de contenido principal ===== */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    h2{margin:0 0 12px;font-size:18px}
+    .muted{color:var(--muted);font-size:13px}
+
+    /* ===== Fichas y listas ===== */
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+    @media (max-width:600px){.cards{grid-template-columns:1fr}}
+    .star-card{background:var(--card);padding:14px;border-radius:12px}
+    .star-card h3{margin:0 0 6px}
+    .star-card p{margin:0;color:var(--muted);font-size:13px}
+
+    /* ===== Timeline ===== */
+    .timeline{display:flex;gap:12px;overflow:auto;padding:8px 0}
+    .step{min-width:160px;background:var(--glass);padding:12px;border-radius:12px}
+    .step strong{display:block;margin-bottom:6px}
+
+    /* ===== Sidebar ===== */
+    aside .card{position:sticky;top:24px}
+    .fact{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+    .fact .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px}
+
+    /* ===== Sistema binario (diagrama simple) ===== */
+    .binary-diagram{display:flex;align-items:center;gap:12px;justify-content:center;padding:18px}
+    .orb{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .orb.small{width:38px;height:38px}
+    .orbit{width:220px;height:220px;border-radius:50%;border:1px dashed rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center}
+
+    /* ===== Posicion galeria ===== */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+    @media (max-width:720px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .thumb{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));height:90px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+
+    /* ===== Footer ===== */
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* ===== Accesibilidad y utilidades ===== */
+    .kbd{background:#071026;border-radius:6px;padding:2px 6px;font-size:12px;border:1px solid rgba(255,255,255,0.03)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><span>★</span></div>
+      <div>
+        <h1>Estrellas</h1>
+        <p class="muted">Introducción, clasificación, ciclo de vida y sistemas binarios — contenido modular para tu proyecto sobre el espacio.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Contenido principal -->
+      <main>
+        <section class="card" aria-labelledby="intro">
+          <h2 id="intro">¿Qué es una estrella?</h2>
+          <p class="muted">Una estrella es una esfera luminosa de plasma mantenida por la gravedad y la presión de la fusión nuclear en su núcleo. Las estrellas producen energía al fusionar elementos ligeros —principalmente hidrógeno— en elementos más pesados.</p>
+
+          <h2 style="margin-top:18px">Clasificación y tipos</h2>
+          <div class="cards">
+            <article class="star-card">
+              <h3>Estrellas enana (tipo común)</h3>
+              <p>Incluyen enanas rojas (muy comunes), enanas amarillas como el Sol y enanas blancas (remanentes estelares).</p>
+            </article>
+
+            <article class="star-card">
+              <h3>Gigantes y supergigantes</h3>
+              <p>Estrellas grandes y brillantes que han agotado el hidrógeno en su núcleo y se expanden: Betelgeuse es un ejemplo conocido.</p>
+            </article>
+
+            <article class="star-card">
+              <h3>Estrellas variables</h3>
+              <p>Estrellas cuya luminosidad cambia con el tiempo (p. ej. Cefeidas, RR Lyrae).</p>
+            </article>
+
+            <article class="star-card">
+              <h3>Estrellas exóticas</h3>
+              <p>Incluyen estrellas de neutrones y púlsares (remanentes extremadamente densos) —no confundir con agujeros negros.</p>
+            </article>
+          </div>
+
+          <h2 style="margin-top:18px">Clasificación espectral (resumen)</h2>
+          <p class="muted">Las estrellas se clasifican según su espectro por las letras <strong>O, B, A, F, G, K, M</strong> (de más caliente a más frío). Cada letra se subdivide en dígitos (p. ej. G2 corresponde al Sol).</p>
+
+          <h2 style="margin-top:18px">Ciclo de vida de una estrella</h2>
+          <div class="timeline" aria-label="Ciclo de vida">
+            <div class="step">
+              <strong>Nube molecular</strong>
+              <p class="muted">Regiones frías con polvo y gas donde nacen las estrellas (nebulosas).</p>
+            </div>
+            <div class="step">
+              <strong>Protoestrella</strong>
+              <p class="muted">Colapso gravitacional y calentamiento; empieza la fusión nuclear cuando alcanza suficiente presión.</p>
+            </div>
+            <div class="step">
+              <strong>Secuencia principal</strong>
+              <p class="muted">Fase estable donde fusiona hidrógeno en helio (el periodo más largo de la vida estelar).</p>
+            </div>
+            <div class="step">
+              <strong>Gigante / Supergigante</strong>
+              <p class="muted">Dependiendo de la masa, la estrella se expande y fusiona elementos más pesados.</p>
+            </div>
+            <div class="step">
+              <strong>Remanente</strong>
+              <p class="muted">La estrella se convierte en enana blanca, estrella de neutrones o agujero negro según su masa.</p>
+            </div>
+          </div>
+
+          <h2 style="margin-top:18px">Sistemas binarios</h2>
+          <p class="muted">Muchas estrellas no son solitarias: existen sistemas binarios (dos estrellas orbitando un centro de masa común). Pueden ser ampliamente separadas o tan cercanas que comparten material.</p>
+
+          <div class="card" style="margin-top:12px">
+            <div class="binary-diagram" role="img" aria-label="Diagrama simple de sistema binario">
+              <div class="orbit">
+                <div class="orb" style="background:radial-gradient(circle,#ffd36b,#ff9b3b);">A</div>
+                <div style="position:absolute;transform:translateX(68px);">
+                  <div class="orb small" style="background:radial-gradient(circle,#9bd1ff,#3b8bff);">B</div>
+                </div>
+              </div>
+            </div>
+            <p class="muted" style="text-align:center;margin:6px 10px 0">Ejemplo simplificado: la estrella A y la B orbitan su baricentro. Si una de ellas crece (por evolución) puede transferir masa a la otra.</p>
+          </div>
+
+          <h2 style="margin-top:18px">Datos curiosos</h2>
+          <ul class="muted">
+            <li>La estrella más cercana al Sol es Proxima Centauri (~4.24 años luz).</li>
+            <li>Enanas rojas pueden vivir billones de años, mucho más que estrellas masivas.</li>
+            <li>Las supernovas enriquecen el medio interestelar con elementos pesados, esenciales para planetas y vida.</li>
+          </ul>
+
+          <h2 style="margin-top:18px">Recursos y referencias</h2>
+          <p class="muted">Puedes enlazar a artículos, imágenes y bases de datos (p. ej. imágenes de telescopios). Reemplaza las miniaturas de la galería por imágenes propias o links autorizados.</p>
+
+          <div class="gallery">
+            <img src="estrellaslol/images/protoestelar.jpg" alt="Nebulosa protostelar" class="thumb">
+            <img src="estrellaslol/images/secuenciaprincipal.jpg" alt="Estrella en secuencia principal" class="thumb">
+            <img src="estrellaslol/images/supernova.jpg" alt="Supernova" class="thumb">
+          </div>
+            <div class="thumb">Imagen: Secuencia principal</div>
+            <div class="thumb">Imagen: Supernova</div>
+          </div>
+        </section>
+
+        <footer>
+          <p>Hola :3</p>
+        </footer>
+      </main>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="card">
+          <h2>Datos rápidos</h2>
+          <div class="fact"><div class="dot"></div><div><strong>Temperatura</strong><div class="muted">Desde ~2,000 K (M) hasta >30,000 K (O)</div></div></div>
+          <div class="fact"><div class="dot"></div><div><strong>Composición</strong><div class="muted">Principalmente hidrógeno y helio; trazas de elementos más pesados</div></div></div>
+          <div class="fact"><div class="dot"></div><div><strong>Vida</strong><div class="muted">Depende de la masa: estrellas masivas viven poco, enanas pequeñas viven más tiempo</div></div></div>
+
+          <h2 style="margin-top:12px">Atajos</h2>
+          <p class="muted">Usa <span class="kbd">#intro</span> enlaces </p>
+
+          <h2 style="margin-top:12px">Plantillas</h2>
+          <p class="muted">:b</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
