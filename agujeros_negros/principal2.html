@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agujeros Negros</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('img/fondoa.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .cuadro {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 1000px;
+      width: 90%;
+      margin-bottom: 40px;
+    }
+
+    .texto {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .texto p {
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    .imagen {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .imagen img {
+      width: 90%;
+      height: auto;
+      border-radius: 15px;
+      opacity: 0.9;
+      transition: 0.4s;
+    }
+
+    .imagen img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 45px rgba(240, 210, 255, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      .cuadro {
+        flex-direction: column;
+      }
+      .imagen img { width: 100%; }
+    }
+
+    /* ================================
+       BOTÓN FLOTANTE + MENÚ DESLIZANTE
+       ================================ */
+    #menu-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background: #8e44ad;
+      color: white;
+      font-size: 30px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    #menu-btn:hover {
+      background: #9b59b6;
+      transform: scale(1.1);
+    }
+
+    #menu-panel {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      padding: 30px;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    #menu-panel h2 {
+      margin-top: 0;
+      color: #e0c4ff;
+    }
+
+    #menu-panel a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: 0.2s;
+    }
+
+    #menu-panel a:hover {
+      color: #b57fff;
+      margin-left: 8px;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- BOTÓN FLOTANTE -->
+<button id="menu-btn">☰</button>
+
+<!-- PANEL DESLIZANTE -->
+<div id="menu-panel">
+  <h2>Secciones</h2>
+  <a href="../estrellaslol/principal3v2.html">Estrellas</a>
+  <a href="../constelaciones_zodiaco/principal.html">Constelaciones</a>
+  <a href="../agujeros_negros/principal2.html">Agujeros Negros</a>
+</div>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const panel = document.getElementById("menu-panel");
+
+  btn.onclick = () => {
+    panel.style.right = panel.style.right === "0px" ? "-300px" : "0px";
+  };
+</script>
+
+<header>
+  <h1>Agujeros Negros</h1>
+</header>
+
+<main>
+
+  <div class="cuadro">
+    <div class="texto">
+      <h2>Ton618</h2>
+      <p>
+        Es un cuásar que alberga un agujero negro ultramasivo considerado uno de los más grandes conocidos,
+        con una masa de unos 66 mil millones de soles. Se encuentra a 10.4 mil millones de años luz de distancia y
+        es tan brillante que eclipsa la luz de su galaxia anfitriona. Su tamaño se debe a la enorme cantidad de materia
+        que está devorando, generando energía colosal y un brillante disco de acreción visible desde la Tierra.
+      </p>
+    </div>
+    <div class="imagen">
+      <img src="img/ton618.jpg" alt="Agujero negro">
+    </div>
+  </div>
+
+  <div class="cuadro">
+    <div class="texto">
+      <h2>M87</h2>
+      <p>
+        El agujero negro supermasivo en la galaxia M87 tiene una masa estimada de 6.500 millones
+        de veces la del Sol y fue el primero en ser fotografiado directamente en 2019 por el Event Horizon Telescope.
+      </p>
+    </div>
+    <div class="imagen">
+      <img src="img/m87.jpg" alt="Centro galáctico">
+    </div>
+  </div>
+
+  <div class="cuadro">
+    <div class="texto">
+      <h2>Sagitario A*</h2>
+      <p>
+        Sagitario A* es el agujero negro supermasivo en el centro de la Vía Láctea,
+        ubicado a aproximadamente 26,000 años luz de la Tierra. Su primera imagen fue lograda en 2022,
+        revelando su estructura anular causada por la gravedad extrema.
+      </p>
+    </div>
+    <div class="imagen">
+      <img src="img/sagit.jpg" alt="Disco de acreción">
+    </div>
+  </div>
+
+  <div class="cuadro">
+    <div class="texto">
+      <h2>GW150914</h2>
+      <p>
+        La primera detección directa de ondas gravitacionales, registrada el 14 de septiembre de 2015.
+        Fue causada por la fusión de dos agujeros negros de 36 y 29 masas solares. El descubrimiento marcó
+        una nueva era en la astronomía moderna.
+      </p>
+    </div>
+    <div class="imagen">
+      <img src="img/blackfusion.jpg" alt="Fusión de agujeros negros">
+    </div>
+  </div>
+
+  <div class="cuadro">
+    <div class="texto">
+      <h2>S5 0014+81</h2>
+      <p>
+        Un blazar extremadamente luminoso cuyo centro alberga uno de los agujeros negros más masivos conocidos,
+        con más de 40 mil millones de masas solares. La energía que libera es tan intensa que supera a toda su galaxia.
+      </p>
+    </div>
+    <div class="imagen">
+      <img src="img/a.jpg" alt="Agujero negro extremo">
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>
