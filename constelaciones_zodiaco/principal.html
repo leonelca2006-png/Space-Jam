@@ -1,0 +1,621 @@
+ <!DOCTYPE html>
+<html>
+ <head>
+      <title> constelaciones </title>
+      <meta charset="utf-8">
+        <style type="text/css">
+            body{margin: 0;
+            padding: 0;}
+            
+            #PRINCIPAL{width: 100%;
+            height: 7700px;
+            background-color: darkcyan;
+            position: relative}
+            
+            #titulo{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:10px;
+            left: 60px;
+            padding: 10px;
+            text-align: center;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            color:#f0f0f0;}
+            
+           #INTRODUCCION{background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;
+            width: 840px; 
+            height: 600px; 
+            position: absolute;
+            left: 545px;
+            top:100px;
+            text-align: center;
+            padding-top: 50PX;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 1.2em;}
+            
+            #IMAGEN{background-color: aqua;
+            position: absolute;
+            width: 450px;
+            height: 650px;
+            top: 100px;
+            left:60px;}
+            
+            
+            
+            #titulo-aries{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:780px;
+            left: 60px;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.0em;
+            letter-spacing: 30px;
+            color:#f0f0f0;}
+            
+            #aries-caballero{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 880px;
+                left:60px;
+            background-color: aliceblue;}
+            
+            #texto-aries{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 880px;
+                left: 500px;
+               background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;
+                padding-left: 30px;
+               padding-right: 30px;
+               font-size: 2.2em;
+                text-align: center;}
+            
+            #aries-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 880px;
+                left: 1040px;
+                background-color: antiquewhite; }
+            
+            
+            
+            #titulo-tauro{position: absolute;
+                width: 1345px;
+                height: 30px;
+                top: 1350px;
+                left:60px;
+                
+                padding: 20px;
+                text-align: center;
+                font-size: 2.0em;
+            letter-spacing: 30px;color:#f0f0f0;}
+            
+            #tauro-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 1450px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-tauro{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 1450px;
+                left: 500px;
+                background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;
+                padding-left: 30px;
+               padding-right: 30px;
+               font-size: 2.3em;
+                text-align: center; }
+            
+            #tauro-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 1450px;
+                left: 1040px;
+                background-color: antiquewhite; }
+            
+            
+            
+            #titulo-geminis{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:1925px;
+            left: 60px;
+         color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #geminis-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 2025px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-geminis{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 2025px;
+                left: 500px;
+                padding-left: 30px;
+               background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;
+                padding-right: 30px;
+               font-size: 2.3em;
+                text-align: center;padding-left: 30px;}
+            
+            #geminis-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 2025px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-cancer{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:2500px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #cancer-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 2595px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-cancer{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 2595px;
+                left: 500px;
+               background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.1em;
+                text-align: center;padding-left: 30px;}
+            
+            #cancer-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 2595px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-leo{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:3075px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #leo-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 3170px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-leo{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 3170px;
+                left: 500px;
+               background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.3em;
+                text-align: center;padding-left: 30px;}
+            
+            #leo-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 3170px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-virgo{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:3650px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #virgo-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 3745px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-virgo{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 3745px;
+                left: 500px;
+               background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.3em;
+                text-align: center;padding-left: 30px;}
+            
+            #virgo-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 3745px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-libra{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:4225px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #libra-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 4320px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-libra{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 4320px;
+                left: 500px;
+                background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.1em;
+                text-align: center;padding-left: 30px;}
+            
+            #libra-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 4320px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-escorpio{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:4800px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #escorpio-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 4900px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-escorpio{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 4900px;
+                left: 500px;
+                background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.3em;
+                text-align: center;padding-left: 30px;}
+            
+            #escorpio-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 4900px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-sagitario{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:5375px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #sagitario-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 5475px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-sagitario{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 5475px;
+                left: 500px;
+                background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.2em;
+                text-align: center;padding-left: 30px;}
+            
+            #sagitario-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 5475px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-capricornio{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:5950px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #capricornio-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 6050px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-capricornio{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 6050px;
+                left: 500px;
+                background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.3em;
+                text-align: center;padding-left: 30px;}
+            
+            #capricornio-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 6050px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-acuario{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:6525px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #acuario-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 6625px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-acuario{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 6625px;
+                left: 500px;
+                background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+               font-size: 2.2em;
+                text-align: center;padding-left: 30px;}
+            
+            #acuario-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 6625px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            
+            
+            #titulo-piscis{position: absolute;
+            width: 1345px;
+            height: 30px;
+            top:7100px;
+            left: 60px;
+            color:#f0f0f0;
+            padding: 20px;
+            text-align: center;font-size: 2.0em;
+            letter-spacing: 30px;}
+            
+            #piscis-caballero{position: absolute;
+                position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 7200px;
+                left:60px;
+                background-color: aliceblue;}
+            
+            #texto-piscis{position: absolute;
+                width: 450px;
+                height: 450px;
+                top: 7200px;
+                left: 500px;
+                background: linear-gradient(to top, #4C0099, #0D001A);
+               color:#f0f0f0;padding-right: 30px;
+                padding-left: 30px;
+               font-size: 2.3em;
+                text-align: center;}
+            
+            #piscis-constelacion{position: absolute;
+                width: 400px;
+                height: 450px;
+                top: 7200px;
+                left: 1040px;
+                background-color: antiquewhite;}
+            
+            /* MENU LATERAL */
+#menu-lateral {
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: Arial;
+}
+
+#menu-lateral h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#menu-lateral a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+
+#menu-lateral a:hover {
+    color: cyan;
+}
+
+/* Ajustar el contenido para que no quede tapado */
+body {
+    margin-left: 270px;
+}
+
+        
+        </style>
+ </head>
+ <body>
+    <!-- MENÚ LATERAL COMPARTIDO -->
+<div id="menu-lateral">
+    <h2>Menú</h2>
+    <a href="../estrellaslol/principal3v2.html">Estrellas</a>
+    <a href="../constelaciones_zodiaco/principal.html">Constelaciones</a>
+    <a href="../agujeros_negros/principal2.html">Agujeros Negros</a>
+</div>
+
+      <div id="PRINCIPAL"> <img style="width: 100%; height: 100%;" src="fotos/fondo.jpg">
+      <div id="titulo">CONSTELACIONES DEL ZODIACO</div>  
+     <div id="INTRODUCCION"> INTRODUCCION<br>
+          <p><br>La palabra zodíaco deriva de la frase griega que significa “rueda de los animales”, aunque en un principio fue un concepto babilonio, creado en el siglo 5 a. C. Los astrónomos babilonios dividieron la banda del cielo donde se movía el Sol, la Luna y los planetas en 12 segmentos iguales, cada uno ocupando 30° de longitud celestial. Los segmentos representaban los 12 meses iguales de 30 días del calendario esquemático y recibieron los nombres que hoy conocemos como “los signos del zodiaco”.</p>
+
+          <p>Las constelaciones situadas a lo largo del camino del Sol, la Luna y los planetas en el cielo fueron observadas incluso antes. Las primeras menciones provienen de la antigua Babilonia, alrededor del año 1000 a.C.    Solo coincidían de forma aproximada con los doce segmentos del zodiaco. Aun así, a doce de estas constelaciones se les dieron los mismos nombres que a los signos zodiacales. Los nombres traducidos de los signos y constelaciones se conservaron gracias a los astrólogos y astrónomos griegos, entre ellos Claudio Ptolomeo. En el siglo II d.C., escribió el Tetrabiblos, que se convirtió en la base de la astrología zodiacal occidental.</p>
+          
+          <p>El zodiaco fue principalmente un concepto astrológico hasta que el modelo heliocéntrico del siglo XVI lo reinterpretó en términos astronómicos. Durante siglos se creyó que todos los cuerpos celestes giraban alrededor de la Tierra, pero Copérnico demostró que era la Tierra la que orbitaba al Sol. La invención del telescopio en el siglo XVII aportó pruebas observacionales a este modelo, otorgando a las constelaciones zodiacales un nuevo valor en la astronomía</p></div>
+          
+     <div id="IMAGEN"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-introduccion.jpg"></div>
+          
+     <div id="titulo-aries">ARIES</div>
+     <div id="aries-caballero"><img style=" width: 100%; height: 100%;" src="fotos/aries-caballero.webp"></div>
+          <div id="texto-aries"><p>Aries, el Carnero, inicia el círculo zodiacal. Es una constelación relativamente discreta, cuya estrella principal es Hamal. En la mitología, suele asociarse con el carnero del Vellocino de Oro, que simboliza el inicio, la energía y el liderazgo.</p></div>
+     <div id="aries-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-aries.avif"></div>
+      
+     <div id="titulo-tauro">TAURO</div>
+     <div id="tauro-caballero"><img style=" width: 100%; height: 100%;" src="fotos/tauro-caballero.jpg"></div>
+     <div id="texto-tauro"><p>Tauro es una de las constelaciones zodiacales más prominentes y una de las figuras celestes más antiguas reconocidas por la humanidad, visible principalmente durante las noches de invierno en el hemisferio norte.</p></div>
+     <div id="tauro-constelacion"><img style="width: 100%; height: 100%;"src="fotos/constelacion-tauro.avif"></div>
+          
+     <div id="titulo-geminis">GEMINIS</div>
+     <div id="geminis-caballero"><img style=" width: 100%; height: 100%;" src="fotos/geminis-caballero.webp"></div>
+     <div id="texto-geminis"><p>Géminis, los Gemelos, es una de las constelaciones más reconocibles, destacando por sus dos estrellas principales y brillantes: Cástor y Pólux, que representan a los hermanos de la mitología griega, simbolizando la dualidad y la comunicación.</p></div>
+     <div id="geminis-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-geminis.avif"></div>
+          
+     <div id="titulo-cancer">CANCER</div>
+     <div id="cancer-caballero"><img style=" width: 100%; height: 100%;" src="fotos/cancer-caballero.webp"></div>
+     <div id="texto-cancer"><p>Cáncer, el Cangrejo, es la constelación más tenue y difícil de ver del zodiaco. Su objeto más famoso es el cúmulo estelar Praesepe (M44), conocido como el Pesebre, o la Colmena. En la mitología se asocia con el cangrejo enviado por la diosa Hera para atacar a Hércules.</p></div>
+     <div id="cancer-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-cancer.avif"></div>
+          
+     <div id="titulo-leo">LEO</div>
+     <div id="leo-caballero"><img style=" width: 100%; height: 100%;" src="fotos/leo-caballero.webp"></div>
+     <div id="texto-leo"><p>Leo, el León, es muy brillante y fácil de identificar por su forma de hoz, que se asemeja a la melena del león. Su estrella más brillante es Régulo, conocida como el "corazón del león" y asociada al León de Nemea en la mitología.</p></div>
+     <div id="leo-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-leo.avif"></div>
+          
+     <div id="titulo-virgo">VIRGO</div>
+     <div id="virgo-caballero"><img style=" width: 100%; height: 100%;" src="fotos/virgo-caballero.webp"></div>
+     <div id="texto-virgo"><p>Virgo, la Doncella, es una constelación extensa, asociada a la diosa de la justicia (Dice) o la cosecha (Perséfone/Deméter). Su estrella principal es Spica, una de las más brillantes del cielo, y es una zona del cielo rica en cúmulos de galaxias.</p></div>
+     <div id="virgo-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-virgo.avif"></div>
+          
+     <div id="titulo-libra">LIBRA</div>
+     <div id="libra-caballero"><img style=" width: 100%; height: 100%;" src="fotos/libra-caballero.webp"></div>
+     <div id="texto-libra"><p>Libra, la Balanza, es la única constelación zodiacal que representa un objeto inanimado, simbolizando el equilibrio y la justicia. Originalmente, sus estrellas representaban las pinzas de Escorpio, y sus estrellas principales son Zubeneschamali y Zubenelgenubi.</p></div>
+     <div id="libra-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-libra.avif"></div>
+          
+     <div id="titulo-escorpio">ESCORPIO</div>
+     <div id="escorpio-caballero"><img style=" width: 100%; height: 100%;" src="fotos/escorpio-caballero.webp"></div>
+     <div id="texto-escorpio"><p>Escorpio, el Escorpión, es una constelación espectacular por su forma. Su estrella principal, Antares, es una supergigante roja que domina la figura, representando el corazón del escorpión que, según la leyenda, picó al cazador Orión.</p></div>
+     <div id="escorpio-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-escorpio.avif"></div>
+          
+     <div id="titulo-sagitario">SAGITARIO</div>
+     <div id="sagitario-caballero"><img style=" width: 100%; height: 100%;" src="fotos/sagitario-caballero.webp"></div>
+     <div id="texto-sagitario"><p>Sagitario, el Arquero, se representa como un centauro apuntando con un arco y una flecha. Es notable porque se encuentra en la dirección del centro galáctico de la Vía Láctea, por lo que es excepcionalmente rica en nebulosas y cúmulos estelares.</p></div>
+     <div id="sagitario-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-sagitario.avif"></div>
+          
+      <div id="titulo-capricornio">CAPRICORNIO</div>
+     <div id="capricornio-caballero"><img style=" width: 100%; height: 100%;" src="fotos/capricornio-caballero.webp"></div>
+     <div id="texto-capricornio"><p>Capricornio, la Cabra Marina, es una constelación tenue y a menudo se representa como una cabra con cola de pez, asociada al dios Pan en la mitología griega. Su estrella más brillante es Deneb Algedi.</p></div>
+     <div id="capricornio-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-capricornio.avif"></div>
+          
+     <div id="titulo-acuario">ACUARIO</div>
+     <div id="acuario-caballero"><img style=" width: 100%; height: 100%;" src="fotos/acuario-caballero.webp"></div>
+     <div id="texto-acuario"><p>Acuario, el Aguador, es una constelación grande y débil, asociada en muchas culturas con las aguas, las inundaciones y el escanciador de los dioses, Ganímedes. Es una zona del cielo conocida por albergar cúmulos globulares y nebulosas planetarias.</p></div>
+     <div id="acuario-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-acuario.avif"></div>
+          
+     <div id="titulo-piscis">PISCIS</div>
+     <div id="piscis-caballero"><img style=" width: 100%; height: 100%;" src="fotos/piscis-caballero.webp"></div>
+     <div id="texto-piscis"><p>Piscis, los Peces, es la última constelación del zodíaco, formada por dos peces atados por una cuerda. Es otra constelación tenue y difusa, asociada a la historia de Afrodita y Eros, que se transformaron en peces para escapar del monstruo Tifón.</p></div>
+     <div id="piscis-constelacion"><img style=" width: 100%; height: 100%;" src="fotos/constelacion-piscis.avif"></div>
+    </div>
+ </body>
+</html>
